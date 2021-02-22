@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BEFD1AB8-641B-423A-9ECF-5999581C2A5D}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>M64.Engine</RootNamespace>
+    <AssemblyName>M64.Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cheat.cs" />
+    <Compile Include="CheatStateChangedEventArgs.cs" />
+    <Compile Include="CheatStateChangedType.cs" />
+    <Compile Include="Counter.cs" />
+    <Compile Include="DictionaryChangedEventArgs.cs" />
+    <Compile Include="ElementMovedEventArgs.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameLog.cs" />
+    <Compile Include="GameLogEntry.cs" />
+    <Compile Include="GameOverEventArgs.cs" />
+    <Compile Include="Gamer.cs" />
+    <Compile Include="GamerJoinedEventArgs.cs" />
+    <Compile Include="GamerLeftEventArgs.cs" />
+    <Compile Include="GameSession.cs" />
+    <Compile Include="ListChangedEventArgs.cs" />
+    <Compile Include="ListChangedType.cs" />
+    <Compile Include="Matrix.cs" />
+    <Compile Include="MatrixEnumerator.cs" />
+    <Compile Include="ObservableDictionary.cs" />
+    <Compile Include="ObservableList.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="Stopwatch.cs" />
+    <Compile Include="Utilities\RandomUtility.cs" />
+    <Compile Include="Utilities\BufferUtility.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+</Project>
